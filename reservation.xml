@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:reservation xmlns:tns="http://www.atinairlines.com/Reservation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atinairlines.com/Reservation reservation.xsd ">
+  <flight>
+    <flightNumber>0</flightNumber>
+    <operatingAirlines>operatingAirlines</operatingAirlines>
+    <arrivalCity>arrivalCity</arrivalCity>
+    <dateOfDeparture>2001-01-01</dateOfDeparture>
+    <estimatedDepartureTime>12:00:00</estimatedDepartureTime>
+  </flight>
+  <passenger>
+    <lastname>lastname</lastname>
+    <firstname>firstname</firstname>
+    <middlename>middlename</middlename>
+    <email>email</email>
+    <phone>phone</phone>
+  </passenger>
+</tns:reservation>
