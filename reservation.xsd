@@ -3,6 +3,15 @@
 	targetNamespace="http://www.atinairlines.com/Reservation"
 	xmlns:tns="http://www.atinairlines.com/Reservation">
 	
+	<!-- Root element reservation -->
+	<element name="reservation">
+		<complexType>
+			<sequence>
+				<element name="flight" type="string"/>
+				<element name="passenger" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
 	
 
 </schema>
