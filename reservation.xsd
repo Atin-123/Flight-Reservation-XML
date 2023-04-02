@@ -17,11 +17,11 @@
 	<!-- element passenger -->
 	<complexType name="passenger">
 		<sequence>
-			<element name="lastname" type="string"/>
-			<element name="firstname" type="string"/>
-			<element name="middlename" type="string"/>
-			<element name="email" type="string"/>
-			<element name="phone" type="string"/>
+			<element name="lastname" type="tns:max20chars"/>
+			<element name="firstname" type="tns:max20chars"/>
+			<element name="middlename" type="tns:max20chars"/>
+			<element name="email" type="tns:max20chars"/>
+			<element name="phone" type="tns:phone"/>
 		</sequence>
 	</complexType>
 	
@@ -30,12 +30,37 @@
 	<complexType name="flight">
 		<sequence>
 			<element name="flightNumber" type="int"/>
-			<element name="operatingAirlines" type="string"/>
-			<element name="arrivalCity" type="string"/>
+			<element name="operatingAirlines" type="tns:operatingAirlines"/>
+			<element name="arrivalCity" type="tns:max20chars"/>
 			<element name="dateOfDeparture" type="date"/>
 			<element name="estimatedDepartureTime" type="time"/>
 		</sequence>
 	</complexType>
+	
+	
+	<!-- Restriction to all strings to have maximum 20 chars -->
+	<simpleType name="max20chars">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+	
+	<!-- Restriction to phone element to have maximum of 10 digits -->
+	<simpleType name="phone">
+	<restriction base="string">
+	<pattern value="[0-9]{10}"></pattern>
+	</restriction>
+	</simpleType>
+	
+	<!-- Restriction to operatingAirlines to have enumerated values -->
+	<simpleType name="operatingAirlines">
+		<restriction base="string">
+			<enumeration value="US"/>
+			<enumeration value="Alaska"/>
+			<enumeration value="SouthWest"/>
+			<enumeration value="Delta"/>
+		</restriction>
+	</simpleType>
 
 </schema>
 
