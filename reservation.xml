@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:reservation xmlns:tns="http://www.atinairlines.com/Reservation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.atinairlines.com/Reservation reservation.xsd ">
   <flight>
-    <flightNumber>0</flightNumber>
-    <operatingAirlines>operatingAirlines</operatingAirlines>
-    <arrivalCity>arrivalCity</arrivalCity>
-    <dateOfDeparture>2001-01-01</dateOfDeparture>
+    <flightNumber>01123</flightNumber>
+    <operatingAirlines>Delta</operatingAirlines>
+    <arrivalCity>US</arrivalCity>
+    <dateOfDeparture>2023-01-01</dateOfDeparture>
     <estimatedDepartureTime>12:00:00</estimatedDepartureTime>
   </flight>
   <passenger>
-    <lastname>lastname</lastname>
-    <firstname>firstname</firstname>
-    <middlename>middlename</middlename>
-    <email>email</email>
-    <phone>phone</phone>
+    <lastname>Mitra</lastname>
+    <firstname>Ritwick</firstname>
+    <middlename>Shankar</middlename>
+    <email>ritwick023@gmail.com</email>
+    <phone>3256897540</phone>
   </passenger>
 </tns:reservation>

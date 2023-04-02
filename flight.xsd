@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.atinairlines.com/Reservation"
+	xmlns:tns="http://www.atinairlines.com/Reservation">
+	
+	<include schemaLocation="common.xsd"/>
+	
+	<!-- element flight -->
+	<complexType name="flight">
+		<sequence>
+			<element name="flightNumber" type="int"/>
+			<element name="operatingAirlines" type="tns:operatingAirlines"/>
+			<element name="arrivalCity" type="tns:max20chars"/>
+			<element name="dateOfDeparture" type="date"/>
+			<element name="estimatedDepartureTime" type="time"/>
+		</sequence>
+	</complexType>
+	
+
+	<!-- Restriction to operatingAirlines to have enumerated values -->
+	<simpleType name="operatingAirlines">
+		<restriction base="string">
+			<enumeration value="US"/>
+			<enumeration value="Alaska"/>
+			<enumeration value="SouthWest"/>
+			<enumeration value="Delta"/>
+		</restriction>
+	</simpleType>
+
+</schema>

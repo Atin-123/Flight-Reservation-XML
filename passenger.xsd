@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.atinairlines.com/Reservation"
+	xmlns:tns="http://www.atinairlines.com/Reservation">
+	
+	<include schemaLocation="common.xsd"/>
+
+	<!-- element passenger -->
+	<complexType name="passenger">
+		<sequence>
+			<element name="lastname" type="tns:max20chars"/>
+			<element name="firstname" type="tns:max20chars"/>
+			<element name="middlename" type="tns:max20chars" minOccurs="0"/>
+			<element name="email" type="tns:max20chars"/>
+			<element name="phone" type="tns:phone"/>
+		</sequence>
+	</complexType>
+	
+	
+	<!-- Restriction to phone element to have maximum of 10 digits -->
+	<simpleType name="phone">
+	<restriction base="string">
+	<pattern value="[0-9]{10}"></pattern>
+	</restriction>
+	</simpleType>
+	
+</schema>
+
+
+

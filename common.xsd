@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.atinairlines.com/Reservation"
+	xmlns:tns="http://www.atinairlines.com/Reservation">
+
+	<!-- Restriction to all strings to have maximum 20 chars -->
+	<simpleType name="max20chars">
+		<restriction base="string">
+			<maxLength value="20"/>
+		</restriction>
+	</simpleType>
+
+
+</schema>
